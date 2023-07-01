@@ -1,0 +1,12 @@
+apiVersion: chrono.chrono.local/v1alpha1
+kind: Chrono
+metadata:
+  labels:
+    app.kubernetes.io/name: chrono
+    app.kubernetes.io/instance: chrono-sample
+    app.kubernetes.io/part-of: chrono
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: chrono
+  name: chrono-sample
+spec:
+  # TODO(user): Add fields here

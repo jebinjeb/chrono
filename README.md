@@ -6,7 +6,7 @@
 
 <h4 align="center">
 
-[![Build Status](https://github.com/jebinjeb/chrono/workflows/docker-image/badge.svg)](https://github.com/jebinjeb/chrono/actions/docker-image.yaml)
+[![Build Status](https://github.com/jebinjeb/chrono/workflows/docker-image/badge.svg)](https://github.com/jebinjeb/chrono/actions/workflows/docker-image.yaml)
 
 
 [![Price](https://img.shields.io/badge/price-FREE-0098f7.svg)](https://github.com/jebinjeb/chrono/blob/main/LICENSE)

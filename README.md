@@ -1,3 +1,21 @@
+<p align="center"><b>Chrono: The ultimate Kubernetes operator for scheduling jobs across nodes.</b></p>
+
+<h4 align="center">
+    <a href="https://github.com/jebinjeb/chrono/discussions">Discussions</a> |
+</h4>
+
+<h4 align="center">
+
+![build-ci](https://github.com/jebinjeb/chrono/workflows/docker-image/badge.svg)
+
+[![Price](https://img.shields.io/badge/price-FREE-0098f7.svg)](https://github.com/jebinjeb/chrono/blob/main/LICENSE)
+[![Discussions](https://badgen.net/badge/icon/discussions?label=open)](https://github.com/jebinjeb/chrono/discussions)
+[![Code of Conduct](https://badgen.net/badge/icon/code-of-conduct?label=open)](./code-of-conduct.md)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+
+</h4>
+
+<hr>
 # chrono
 
 ## Features of Chrono:

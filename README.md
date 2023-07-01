@@ -7,6 +7,8 @@
 <h4 align="center">
 
 ![build-ci](https://github.com/jebinjeb/chrono/workflows/docker-image/badge.svg)
+[![Build Status](https://github.com/jebinjeb/chrono/workflows/docker-image/badge.svg)](https://github.com/jebinjeb/chrono/actions/docker-image.yaml)
+
 
 [![Price](https://img.shields.io/badge/price-FREE-0098f7.svg)](https://github.com/jebinjeb/chrono/blob/main/LICENSE)
 [![Discussions](https://badgen.net/badge/icon/discussions?label=open)](https://github.com/jebinjeb/chrono/discussions)

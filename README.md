@@ -1,7 +1,7 @@
 <p align="center"><b>Chrono: The ultimate Kubernetes operator for scheduling jobs across nodes.</b></p>
 
 <h4 align="center">
-    <a href="https://github.com/jebinjeb/chrono/discussions">Discussions</a> |
+    <a href="https://github.com/jebinjeb/chrono/discussions">Discussions</a> 
 </h4>
 
 <h4 align="center">
@@ -16,6 +16,7 @@
 </h4>
 
 <hr>
+
 # chrono
 
 ## Features of Chrono:

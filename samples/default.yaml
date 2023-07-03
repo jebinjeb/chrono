@@ -1,7 +1,7 @@
 apiVersion: chrono.chrono.local/v1alpha1
 kind: Chrono
 metadata:
-  name: my-chrono
+  name: run-chrono
 spec:
   foo: example-value
   schedule: "* * * * *"

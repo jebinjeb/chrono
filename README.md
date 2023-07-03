@@ -6,7 +6,7 @@
 
 <h4 align="center">
 
-[![Docker Image CI](https://github.com/jebinjeb/chrono/actions/workflows/docker-image.yaml/badge.svg?branch=main)](https://github.com/jebinjeb/chrono/actions/workflows/docker-image.yaml)
+[![Docker Image CI](https://github.com/jebinjeb/chrono/actions/workflows/docker-image.yaml/badge.svg)](https://github.com/jebinjeb/chrono/actions/workflows/docker-image.yaml)
 [![Go Report Card](https://goreportcard.com/badge/github.com/jebinjeb/chrono)](https://goreportcard.com/report/github.com/jebinjeb/chrono)
 
 

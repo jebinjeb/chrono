@@ -7,6 +7,7 @@
 <h4 align="center">
 
 [![Docker Image CI](https://github.com/jebinjeb/chrono/actions/workflows/docker-image.yaml/badge.svg?branch=main)](https://github.com/jebinjeb/chrono/actions/workflows/docker-image.yaml)
+[![Go Report Card](https://goreportcard.com/badge/github.com/jebinjeb/chrono)](https://goreportcard.com/report/github.com/jebinjeb/chrono)
 
 
 [![Price](https://img.shields.io/badge/price-FREE-0098f7.svg)](https://github.com/jebinjeb/chrono/blob/main/LICENSE)

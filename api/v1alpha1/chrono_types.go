@@ -20,16 +20,44 @@ import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 )
 
-// EDIT THIS FILE!  THIS IS SCAFFOLDING FOR YOU TO OWN!
-// NOTE: json tags are required.  Any new fields you add must have json tags for the fields to be serialized.
-
 // ChronoSpec defines the desired state of Chrono
 type ChronoSpec struct {
 	// INSERT ADDITIONAL SPEC FIELDS - desired state of cluster
 	// Important: Run "make" to regenerate code after modifying this file
 
 	// Foo is an example field of Chrono. Edit chrono_types.go to remove/update
-	Foo string `json:"foo,omitempty"`
+	Foo      string      `json:"foo,omitempty"`
+	Schedule string      `json:"schedule,omitempty"`
+	PodTemplate PodTemplate `json:"podTemplate,omitempty"`
+}
+
+// PodTemplate defines the pod template specification for Chrono
+type PodTemplate struct {
+	Spec PodSpec `json:"spec,omitempty"`
+}
+
+// PodSpec defines the pod specification for Chrono
+type PodSpec struct {
+	Template PodTemplateSpec `json:"template,omitempty"`
+	RestartPolicy string `json:"restartPolicy,omitempty"`
+}
+
+// PodTemplateSpec defines the template for the pod
+type PodTemplateSpec struct {
+	Spec PodSpecSpec `json:"spec,omitempty"`
+}
+
+// PodSpecSpec defines the specification for the pod template
+type PodSpecSpec struct {
+	Containers []Container `json:"containers,omitempty"`
+}
+
+// Container defines the container specification
+type Container struct {
+	Name            string   `json:"name,omitempty"`
+	Image           string   `json:"image,omitempty"`
+	ImagePullPolicy string   `json:"imagePullPolicy,omitempty"`
+	Command         []string `json:"command,omitempty"`
 }
 
 // ChronoStatus defines the observed state of Chrono
@@ -62,3 +90,4 @@ type ChronoList struct {
 func init() {
 	SchemeBuilder.Register(&Chrono{}, &ChronoList{})
 }
+

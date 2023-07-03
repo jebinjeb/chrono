@@ -39,6 +39,45 @@ spec:
                 description: Foo is an example field of Chrono. Edit chrono_types.go
                   to remove/update
                 type: string
+              podTemplate:
+                description: PodTemplate defines the pod template specification for
+                  Chrono
+                properties:
+                  spec:
+                    description: PodSpec defines the pod specification for Chrono
+                    properties:
+                      restartPolicy:
+                        type: string
+                      template:
+                        description: PodTemplateSpec defines the template for the
+                          pod
+                        properties:
+                          spec:
+                            description: PodSpecSpec defines the specification for
+                              the pod template
+                            properties:
+                              containers:
+                                items:
+                                  description: Container defines the container specification
+                                  properties:
+                                    command:
+                                      items:
+                                        type: string
+                                      type: array
+                                    image:
+                                      type: string
+                                    imagePullPolicy:
+                                      type: string
+                                    name:
+                                      type: string
+                                  type: object
+                                type: array
+                            type: object
+                        type: object
+                    type: object
+                type: object
+              schedule:
+                type: string
             type: object
           status:
             description: ChronoStatus defines the observed state of Chrono

@@ -1,0 +1,21 @@
+apiVersion: chrono.chrono.local/v1alpha1
+kind: Chrono
+metadata:
+  name: my-chrono
+spec:
+  foo: example-value
+  schedule: "* * * * *"
+  podTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+            - name: hello
+              image: busybox:1.28
+              imagePullPolicy: IfNotPresent
+              command:
+                - /bin/sh
+                - -c
+                - date; echo Hello from the Kubernetes cluster
+          restartPolicy: OnFailure
+

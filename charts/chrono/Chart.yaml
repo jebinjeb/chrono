@@ -1,5 +1,5 @@
 apiVersion: v2
-name: chart
+name: chrono
 description: A Helm chart for chrono operator
 # A chart can be either an 'application' or a 'library' chart.
 #

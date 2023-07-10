@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  chart:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2023-07-10T05:52:44.238229046Z"
+    description: A Helm chart for chrono operator
+    digest: 523ee00aa3c56cf14153eb3c1cac20b24cfa331dcfd53a70a79c1c8927dc8230
+    name: chart
+    type: application
+    urls:
+    - https://github.com/jebinjeb/chrono/releases/download/chart-0.1.1/chart-0.1.1.tgz
+    version: 0.1.1
+generated: "2023-07-10T05:52:44.09604715Z"

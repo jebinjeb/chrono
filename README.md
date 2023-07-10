@@ -29,3 +29,23 @@
 
 ## Problems Addressed by Chrono:
 - Limited Job Scheduling Options: Kubernetes provides basic job scheduling capabilities through Jobs and CronJobs, but they have limitations when it comes to node-aware scheduling and node selection. Chrono addresses these limitations by offering advanced scheduling features.
+
+
+###  How to install and run chrono:
+
+#### Prerequisites
+* A Kubernetes cluster 
+* Helm binary
+
+#### Prepare Namespace
+```bash
+kubectl create namespace chrono
+```
+
+#### Client Installation
+```bash
+helm repo add chrono https://jebinjeb.github.io/chrono/
+helm repo update
+
+helm upgrade -i chrono chrono/chrono -n chrono 
+```

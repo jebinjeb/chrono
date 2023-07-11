@@ -15,6 +15,9 @@ jobs:
     permissions:
       packages: write
       id-token: write
+      contents: read
+      actions: read
+      security-events: write
 
     steps:
       - name: Checkout

@@ -7,8 +7,6 @@ on:
       - 'charts/**'
     branches:
       - 'main'
-    tags:
-      - 'v*.*.*'
   pull_request:
     branches:
       - 'main'
@@ -71,20 +69,6 @@ jobs:
           build-args: |
             "GITHUB_TOKEN=${{ secrets.TOKEN }}"
             
-      - name: Install Cosign
-        uses: sigstore/cosign-installer@v3.1.1
-
-      -
-        name: Sign the images
-        run: |
-          cosign sign -y ${{ env.REGISTRY }}/${{ env.IMAGE }}:${{ github.ref_name }},$({{ steps.meta.outputs.tags }} | grep -w latest)
-        env:
-          COSIGN_EXPERIMENTAL: 1
-
-      - name: Verify the pushed tags
-        run: cosign verify ${{ env.REGISTRY }}/${{ env.IMAGE }}:${{ steps.meta.outputs.tags }} --certificate-identity ${{ env.GH_URL }}/${{ github.repository }}/.github/workflows/docker-image.yaml@refs/tags/${{ steps.meta.outputs.tags }}  --certificate-oidc-issuer https://token.actions.githubusercontent.com
-        env:
-          COSIGN_EXPERIMENTAL: 1
       -
         name: Build and push on PR
         uses: docker/build-push-action@v4

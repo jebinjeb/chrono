@@ -77,12 +77,12 @@ jobs:
       -
         name: Sign the images
         run: |
-          cosign sign -y ${{ env.REGISTRY }}/${{ env.IMAGE }}:latest
+          cosign sign -y ${{ env.REGISTRY }}/${{ env.IMAGE }}:${{ steps.get-tags.outputs.release_tag }}
         env:
           COSIGN_EXPERIMENTAL: 1
 
       - name: Verify the pushed tags
-        run: cosign sign ${{ env.REGISTRY }}/${{ env.IMAGE }}:latest
+        run: cosign verify ${{ env.REGISTRY }}/${{ env.IMAGE }}:${{ steps.get-tags.outputs.release_tag }} --certificate-identity ${{ env.GH_URL }}/${{ github.repository }}/.github/workflows/docker-image.yaml@refs/tags/${{ steps.get-tags.outputs.release_tag }}  --certificate-oidc-issuer https://token.actions.githubusercontent.com
         env:
           COSIGN_EXPERIMENTAL: 1
       -

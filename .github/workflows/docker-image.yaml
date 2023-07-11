@@ -77,7 +77,7 @@ jobs:
       -
         name: Sign the images
         run: |
-          cosign sign ${{ env.REGISTRY }}/${{ env.IMAGE }}:latest
+          cosign sign -y ${{ env.REGISTRY }}/${{ env.IMAGE }}:latest
         env:
           COSIGN_EXPERIMENTAL: 1
 

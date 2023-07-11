@@ -77,7 +77,7 @@ jobs:
       -
         name: Sign the images
         run: |
-          cosign sign -y ${{ env.REGISTRY }}/${{ env.IMAGE }}:${{ steps.meta.outputs.tags }}
+          cosign sign -y ${{ env.REGISTRY }}/${{ env.IMAGE }}:${{ github.ref_name }},$({{ steps.meta.outputs.tags }} | grep -w latest)
         env:
           COSIGN_EXPERIMENTAL: 1
 

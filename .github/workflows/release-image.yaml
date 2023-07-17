@@ -61,7 +61,7 @@ jobs:
 
       - name: Sign the images
         run: |
-          cosign sign -y ${{ steps.meta.outputs.tags }}
+          cosign sign -y ${{ env.REGISTRY }}/${{ github.repository }}:${{ github.run_id }}
 
         env:
           COSIGN_EXPERIMENTAL: 1
